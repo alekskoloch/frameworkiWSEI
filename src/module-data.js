@@ -1,72 +1,72 @@
 export const data = [
   {
     "id": 1,
-    "brand": "Ford",
-    "year": 2020,
-    "color": "blue",
-    "registration": "XYZ3609"
+    "brand": "Toyota",
+    "year": 2015,
+    "color": "red",
+    "registration": "XYZ7622"
   },
   {
     "id": 2,
     "brand": "BMW",
-    "year": 1998,
-    "color": "green",
-    "registration": "XYZ6389"
+    "year": 2010,
+    "color": "blue",
+    "registration": "XYZ2362"
   },
   {
     "id": 3,
-    "brand": "Ford",
-    "year": 2003,
-    "color": "green",
-    "registration": "XYZ6338"
+    "brand": "Tesla",
+    "year": 2015,
+    "color": "red",
+    "registration": "XYZ7765"
   },
   {
     "id": 4,
-    "brand": "Toyota",
-    "year": 2015,
-    "color": "green",
-    "registration": "XYZ3522"
+    "brand": "Audi",
+    "year": 2010,
+    "color": "black",
+    "registration": "XYZ9559"
   },
   {
     "id": 5,
-    "brand": "Ford",
-    "year": 2003,
+    "brand": "Audi",
+    "year": 2015,
     "color": "red",
-    "registration": "XYZ4593"
+    "registration": "XYZ6006"
   },
   {
     "id": 6,
-    "brand": "BMW",
-    "year": 2010,
-    "color": "blue",
-    "registration": "XYZ8333"
+    "brand": "Audi",
+    "year": 1998,
+    "color": "yellow",
+    "registration": "XYZ8490"
   },
   {
     "id": 7,
-    "brand": "Toyota",
-    "year": 2020,
-    "color": "green",
-    "registration": "XYZ2959"
+    "brand": "Tesla",
+    "year": 2003,
+    "color": "red",
+    "registration": "XYZ8333"
   },
   {
     "id": 8,
-    "brand": "BMW",
-    "year": 2015,
-    "color": "yellow",
-    "registration": "XYZ8534"
+    "brand": "Toyota",
+    "year": 2010,
+    "color": "blue",
+    "registration": "XYZ3054"
   },
   {
     "id": 9,
-    "brand": "BMW",
-    "year": 2015,
-    "color": "yellow",
-    "registration": "XYZ4883"
+    "brand": "Toyota",
+    "year": 1998,
+    "color": "black",
+    "registration": "XYZ5712"
   },
   {
     "id": 10,
-    "brand": "Ford",
+    "brand": "Tesla",
     "year": 1998,
-    "color": "green",
-    "registration": "XYZ4319"
+    "color": "blue",
+    "registration": "XYZ2047"
   }
 ];
