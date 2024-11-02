@@ -7,6 +7,7 @@ const colors = ['red', 'blue', 'green', 'yellow', 'black'];
 const years = [1998, 2003, 2010, 2015, 2020];
 
 const randomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
+const randomRating = () => Math.floor(Math.random() * 11);
 
 let objects = [];
 for (let i = 0; i < count; i++) {
@@ -16,6 +17,7 @@ for (let i = 0; i < count; i++) {
     year: randomElement(years),
     color: randomElement(colors),
     registration: `XYZ${Math.floor(1000 + Math.random() * 9000)}`,
+    rating: randomRating()
   };
   objects.push(car);
 }
