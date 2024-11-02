@@ -1,72 +1,82 @@
 export const data = [
   {
     "id": 1,
-    "brand": "Audi",
-    "year": 1998,
-    "color": "green",
-    "registration": "XYZ8696"
+    "brand": "Toyota",
+    "year": 2015,
+    "color": "red",
+    "registration": "XYZ9112",
+    "rating": 0
   },
   {
     "id": 2,
-    "brand": "Tesla",
-    "year": 2003,
-    "color": "blue",
-    "registration": "XYZ7176"
+    "brand": "Audi",
+    "year": 2010,
+    "color": "yellow",
+    "registration": "XYZ5011",
+    "rating": 5
   },
   {
     "id": 3,
-    "brand": "BMW",
-    "year": 2020,
-    "color": "black",
-    "registration": "XYZ6872"
+    "brand": "Toyota",
+    "year": 2003,
+    "color": "green",
+    "registration": "XYZ9183",
+    "rating": 1
   },
   {
     "id": 4,
-    "brand": "Toyota",
+    "brand": "BMW",
     "year": 2015,
-    "color": "black",
-    "registration": "XYZ4070"
+    "color": "yellow",
+    "registration": "XYZ8828",
+    "rating": 10
   },
   {
     "id": 5,
-    "brand": "Tesla",
+    "brand": "BMW",
     "year": 2010,
-    "color": "yellow",
-    "registration": "XYZ8111"
+    "color": "black",
+    "registration": "XYZ3070",
+    "rating": 4
   },
   {
     "id": 6,
-    "brand": "Tesla",
-    "year": 2020,
-    "color": "yellow",
-    "registration": "XYZ3714"
+    "brand": "Ford",
+    "year": 2015,
+    "color": "black",
+    "registration": "XYZ3895",
+    "rating": 7
   },
   {
     "id": 7,
-    "brand": "Toyota",
-    "year": 2020,
+    "brand": "Ford",
+    "year": 2003,
     "color": "blue",
-    "registration": "XYZ1020"
+    "registration": "XYZ4443",
+    "rating": 0
   },
   {
     "id": 8,
-    "brand": "Audi",
-    "year": 2003,
-    "color": "yellow",
-    "registration": "XYZ1177"
+    "brand": "Toyota",
+    "year": 2010,
+    "color": "blue",
+    "registration": "XYZ9573",
+    "rating": 5
   },
   {
     "id": 9,
-    "brand": "Ford",
-    "year": 2010,
-    "color": "red",
-    "registration": "XYZ2230"
+    "brand": "Toyota",
+    "year": 1998,
+    "color": "blue",
+    "registration": "XYZ2443",
+    "rating": 7
   },
   {
     "id": 10,
     "brand": "Toyota",
-    "year": 2010,
-    "color": "red",
-    "registration": "XYZ4628"
+    "year": 2015,
+    "color": "blue",
+    "registration": "XYZ8037",
+    "rating": 2
   }
 ];

@@ -1,23 +1,37 @@
-import React, { useState } from 'react';
+import React from 'react';
 import FlexContainer from '../components/FlexContainer';
-import { data } from '../module-data';
 import RatingBar from '../components/RatingBar';
 
-const Item = ({ brand, year, color, registration, id, rating, dispatch }) => {
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedBrand, setEditedBrand] = useState(brand);
+const Item = ({ brand, year, color, registration, id, rating, dispatch, cars }) => {
+  const [isEditing, setIsEditing] = React.useState(false);
+  const [editedBrand, setEditedBrand] = React.useState(brand);
 
   const handleEditToggle = () => {
     setIsEditing(!isEditing);
   };
 
   const handleSave = () => {
-    dispatch({
-      type: "edit",
-      id: id,
-      brand: editedBrand
-    });
-    setIsEditing(false);
+    // Sprawdzenie, czy cars jest zdefiniowane
+    if (!cars) return;
+
+    const updatedCars = cars.map(car => car.id === id ? { ...car, brand: editedBrand } : car);
+
+    fetch('http://localhost:5000/update', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(updatedCars)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data.message);
+        dispatch({
+          type: "edit",
+          id: id,
+          brand: editedBrand
+        });
+        setIsEditing(false);
+      })
+      .catch(error => console.error('Error:', error));
   };
 
   const handleDelete = () => {
@@ -28,19 +42,50 @@ const Item = ({ brand, year, color, registration, id, rating, dispatch }) => {
   };
 
   const handleRate = () => {
-    dispatch({
-      type: "rate",
-      id: id,
-      rating: rating === 10 ? 0 : rating + 1
-    });
+    // Sprawdzenie, czy cars jest zdefiniowane
+    if (!cars) return;
+
+    const newRating = rating === 10 ? 0 : rating + 1;
+    const updatedCars = cars.map(car => car.id === id ? { ...car, rating: newRating } : car);
+
+    fetch('http://localhost:5000/update', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(updatedCars)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data.message);
+        dispatch({
+          type: "rate",
+          id: id,
+          rating: newRating
+        });
+      })
+      .catch(error => console.error('Error:', error));
   };
 
   const handleDirectRate = (newRating) => {
-    dispatch({
-      type: "rate",
-      id: id,
-      rating: newRating
-    });
+    // Sprawdzenie, czy cars jest zdefiniowane
+    if (!cars) return;
+
+    const updatedCars = cars.map(car => car.id === id ? { ...car, rating: newRating } : car);
+
+    fetch('http://localhost:5000/update', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(updatedCars)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data.message);
+        dispatch({
+          type: "rate",
+          id: id,
+          rating: newRating
+        });
+      })
+      .catch(error => console.error('Error:', error));
   };
 
   return (
@@ -75,11 +120,11 @@ const Item = ({ brand, year, color, registration, id, rating, dispatch }) => {
   );
 };
 
-const Lab3Page = () => {
+const Lab3Page = ({ cars, dispatch }) => {
   return (
     <div>
       <h1>Laboratorium 3</h1>
-      <FlexContainer element={Item} data={data} />
+      <FlexContainer element={Item} data={cars} dispatch={dispatch} cars={cars} />
     </div>
   );
 };
